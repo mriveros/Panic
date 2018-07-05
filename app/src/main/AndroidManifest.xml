@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.panic.root.panic">
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".EnvioPanicActivity"
+            android:label="@string/app_name"
+            android:parentActivityName=".MainActivity" >
+        </activity>
+        <activity
+            android:name=".EnvioSaludActivity"
+            android:label="@string/app_name"
+            android:parentActivityName=".MainActivity" >
+        </activity>
+        <activity
+            android:name=".MainActivityDos"
+            android:label="@string/menu_principal"
+            android:icon="@drawable/agency"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name=".Customer"
+            android:label="@string/customers"
+            android:icon="@drawable/users"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name=".ItemDetail"
+            android:label="@string/details"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name=".ItemAdd"
+            android:label="@string/new_client"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity
+            android:name=".Options"
+            android:label="@string/new_client"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity
+            android:name=".Signature"
+            android:label="@string/new_client"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+    </application>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <permission android:name="android.permission.INTERNET"></permission>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <uses-permission android:name="android.permission.SEND_SMS"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+</manifest>

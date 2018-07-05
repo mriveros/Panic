@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/action_signature"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/signature">
+    </item>   
+    <item
+        android:id="@+id/action_print"
+        android:orderInCategory="200"
+        android:showAsAction="never"
+        android:title="@string/print">
+    </item> 
+    <item
+        android:id="@+id/action_email"
+        android:orderInCategory="300"
+        android:showAsAction="never"
+        android:title="@string/email">
+    </item>     
+</menu>

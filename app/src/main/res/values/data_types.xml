@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="integer" name="customer_type">1</item>
+    <item type="integer" name="company_type">2</item>
+    <item type="integer" name="product_type">3</item>
+	<item type="integer" name="invoice_type">4</item>
+	<item type="integer" name="REQUEST_CUSTOMER">1</item>
+	<item type="integer" name="REQUEST_COMPANY">2</item>
+	<item type="integer" name="REQUEST_OPTIONS">3</item>
+	<item type="integer" name="REQUEST_SIGNATURE">4</item>
+	<item name="REQUEST_FILE" type="integer">5</item>
+</resources>

@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/action_importCustomers"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/importCustomers">
+    </item>
+    <item
+        android:id="@+id/action_importCompanies"
+        android:orderInCategory="200"
+        android:showAsAction="never"
+        android:title="@string/importCompanies">
+    </item>    
+    <item
+        android:id="@+id/action_importProducts"
+        android:orderInCategory="300"
+        android:showAsAction="never"
+        android:title="@string/importProducts">
+    </item>    
+</menu>
