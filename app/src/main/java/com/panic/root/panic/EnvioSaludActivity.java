@@ -1,13 +1,16 @@
 package com.panic.root.panic;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v4.app.ActivityCompat;
 import android.telephony.gsm.SmsManager;
 import android.widget.Toast;
 
@@ -115,7 +118,9 @@ private class SendData extends AsyncTask {
 	    HttpClient httpclient = new DefaultHttpClient();
 	    //Utilizamos la HttpPost para enviar lso datos
 	    //A la url donde se encuentre nuestro archivo receptor
+
 	    HttpPost httppost = new HttpPost("http://www.smarthub.design/aguara/datareceptor_salud.php");
+
 	    try {
 	    List<NameValuePair> postValues = new ArrayList<NameValuePair>(2);
 	    postValues.add(new BasicNameValuePair("latitud", getIntent().getStringExtra("latitud")));
@@ -171,6 +176,11 @@ private class SendData extends AsyncTask {
     }
 	private void enviarSMS(String phone){
 		try {
+			if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED ) {
+
+				ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.SEND_SMS, Manifest.permission.SEND_SMS}, 225);
+
+			}
 			SmsManager sms = SmsManager.getDefault();
 			sms.sendTextMessage(phone,null,"Mensaje de Salud recibido. Lat: "+getIntent().getStringExtra("latitud")
 					+" Long: "+getIntent().getStringExtra("longitud"),null,null);
