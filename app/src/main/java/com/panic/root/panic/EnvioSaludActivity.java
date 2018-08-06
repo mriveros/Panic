@@ -115,7 +115,7 @@ private class SendData extends AsyncTask {
 	    HttpClient httpclient = new DefaultHttpClient();
 	    //Utilizamos la HttpPost para enviar lso datos
 	    //A la url donde se encuentre nuestro archivo receptor
-	    HttpPost httppost = new HttpPost("http://192.168.0.25/aguara/datareceptor_salud.php");
+	    HttpPost httppost = new HttpPost("http://www.smarthub.design/aguara/datareceptor_salud.php");
 	    try {
 	    List<NameValuePair> postValues = new ArrayList<NameValuePair>(2);
 	    postValues.add(new BasicNameValuePair("latitud", getIntent().getStringExtra("latitud")));
